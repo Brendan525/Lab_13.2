@@ -14,7 +14,7 @@ namespace Lab_13._2.Controllers
 {
     public class ProductController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Product()
         {
             IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; Trusted_Connection=Yes");
             db.Open();

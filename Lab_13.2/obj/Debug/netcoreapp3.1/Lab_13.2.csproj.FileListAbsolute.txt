@@ -9,7 +9,6 @@ C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\bin\Debug\netcoreapp3.1\Lab_1
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\bin\Debug\netcoreapp3.1\Lab_13.2.pdb
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\bin\Debug\netcoreapp3.1\Lab_13.2.Views.dll
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\bin\Debug\netcoreapp3.1\Lab_13.2.Views.pdb
-C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Lab_13.2.csprojAssemblyReference.cache
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Lab_13.2.AssemblyInfoInputs.cache
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Lab_13.2.AssemblyInfo.cs
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Lab_13.2.RazorAssemblyInfo.cache
@@ -118,5 +117,5 @@ C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\bin\Debug\netcoreapp3.1\runti
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Testing.cshtml.g.cs
-C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Razor\Views\Product\Detail.cshtml.g.cs
+C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Razor\Views\Product\Product.cshtml.g.cs

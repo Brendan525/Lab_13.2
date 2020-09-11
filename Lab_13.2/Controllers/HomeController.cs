@@ -41,8 +41,24 @@ namespace Lab_13._2.Controllers
         public IActionResult OrderConfirmation(string drink, string size, string selection, string time, string firstname, string lastname, string streetAddress1, string streetAddress2, string city, string state, string zipCode, string country)
         {
 
+            WebOrder webOrder1 = new WebOrder()
+            {
+                Drink = drink,
+                Size = size,
+                Selection = selection,
+                Time = time,
+                FirstName = firstname,
+                LastName = lastname,
+                StreetAddress1 = streetAddress1,
+                StreetAddress2 = streetAddress2,
+                City = city,
+                State = state,
+                ZipCode = zipCode,
+                Country = country
+            };
+
             ViewBag.ThankYou = "Thank you for your order. Below is your order";
-            return View();
+            return View(webOrder1);
         }
 
         public IActionResult Testing()

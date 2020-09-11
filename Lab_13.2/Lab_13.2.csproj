@@ -12,7 +12,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Content\Images\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\HomeIndex.css" />
+    <None Include="wwwroot\Images\dalonga_coffee_20606_16x9.jpg" />
+    <None Include="wwwroot\Images\FirstNational-20140625-0021.jpg" />
+    <None Include="wwwroot\Images\mocha-1.jpg" />
+    <None Include="wwwroot\Images\RedRGBwalkdown.png" />
+    <None Include="wwwroot\Images\shutterstock_518188240-800x600.jpg" />
+    <None Include="wwwroot\Images\Whipped-Coffee-1.jpg" />
+    <None Include="wwwroot\js\JavaScript.js" />
   </ItemGroup>
 
 </Project>

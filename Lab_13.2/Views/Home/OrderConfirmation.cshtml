@@ -3,5 +3,51 @@
     ViewData["Title"] = "OrderConfirmation";
 }
 
-<h1>OrderConfirmation</h1>
+<img src="~/Images/mocha-1.jpg" height="80" class="coffee1" />
 
+<div class="orderNumber">
+    <h2>GC Order # 0000000001</h2>
+</div>
+<br />
+
+<div class="order">
+    <h4>@ViewBag.ThankYou</h4>
+</div>
+<br />
+
+<div class="nameField">
+    Name: @Model.FirstName @Model.LastName
+</div>
+<br />
+
+<div class="drink">
+    Drink: @Model.Drink
+</div>
+<br />
+
+<div class="size">
+    Size: @Model.Size
+</div>
+<br />
+
+<div class="selection">
+    Delivery or Pick-Up: @Model.Selection @Model.Time
+</div>
+<br />
+
+<div class="address">
+    @Model.StreetAddress1 @Model.StreetAddress2
+</div>
+<br />
+
+<div class="city">
+    @Model.City @Model.State @Model.ZipCode
+</div>
+<br />
+
+<div class="county">
+    @Model.Country
+</div>
+<br />
+
+<img src="~/Images/shutterstock_518188240-800x600.jpg" height="80" class="coffee2" />
