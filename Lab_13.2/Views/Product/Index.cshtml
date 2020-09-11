@@ -1,0 +1,17 @@
+﻿@model List<CoffeeTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of Products</h1>
+
+
+@foreach (CoffeeTable item in Model)
+{
+<a href="/Product/Detail?ProductID=@item.ProductID">@item.ProductName</a>
+<br />
+}
+
+
+

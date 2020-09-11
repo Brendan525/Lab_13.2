@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "Menu";
+    @*@Styles.Render("~/Content/OrderMenu.css");*@
+    @*@Scripts.Render("~/Scripts/JavaScript.js");*@
+}
+
+<h2 class="menuTitle">Coffee Menu</h2>
+
+
+<form method="POST" action="/Home/OrderConfirmation">
+    <fieldset>
+
+        <p class="menuTitle">Please select from the menu below </p><br /> <br />
+
+        <label for="drinkSelection">Please Select Your Drink:</label> <br />
+        <select id="drinks" name="drink">
+            <option>Please choose your drink</option>
+            <option>Cappuccino</option>
+            <option>Espresso</option>
+            <option>Iced Coffee</option>
+            <option>Latte</option>
+            <option>Cold Brew Coffee</option>
+            <option>Frappé Coffee</option>
+            <option>Caffé Mocha</option>
+            <option>Carajillo</option>
+        </select> <br /> <br />
+
+        <label for="drinkSize">Please Select Drink Size:</label> <br />
+        <select id="cupSize" name="size">
+            <option>Please select your size</option>
+            <option>Short</option>
+            <option>Tall</option>
+            <option>Grande</option>
+            <option>Venti</option>
+
+        </select> <br /> <br />
+
+
+        <input type="radio" id="pickup" name="selection" value="Pick-Up" onclick="displayPickUpTimeOrDeliveryAddress()">
+        <label for="Pick-Up" class="pickup">Pick-Up</label> <br />
+
+
+        <input type="radio" id="delivery" name="selection" value="Delivery" onclick="displayPickUpTimeOrDeliveryAddress()">
+        <label for="Delivery" class="delivery">Delivery</label> <br /> <br />
+
+
+        <div id="pickUpTime" style="display:none">
+
+            <label for="time">Enter/Select Pick Up Time:</label><br>
+            <input type="time" id="selectedTime" name="time"> <br /> <br />
+
+        </div>
+
+        <div id="deliveryTime" style="display:none">
+
+            <label for="firstame">First Name:</label> <br />
+            <input type="text" placeholder="John" name="firstname"> <br /> <br />
+
+            <label for="lastname">Last Name:</label> <br />
+            <input type="text" placeholder="Smith" name="lastname"> <br /> <br />
+
+            <label for="address1">Street Address 1:</label> <br />
+            <input type="text" name="streetAddress1"> <br /> <br />
+
+            <label for="address2">Street Address 2:</label> <br />
+            <input type="text" name="streetAddress2"> <br /> <br />
+
+            <label for="city">City:</label> <br />
+            <input type="text" name="city"> <br /> <br />
+
+            <label for="zipcode">Zip Code:</label> <br />
+            <input type="text" name="zipCode" pattern="[0-9]{5}"> <br /> <br />
+
+            <label for="homestate">Choose Your State:</label><br>
+            <select id="states" name="state">
+                <option></option>
+                <option>Alabama</option>
+                <option>Alaska</option>
+                <option>Arizona</option>
+                <option>Arkansas</option>
+                <option>California</option>
+                <option>Colorado</option>
+                <option>Connecticut</option>
+                <option>Delaware</option>
+                <option>District Of Columbia</option>
+                <option>Florida</option>
+                <option>Georgia</option>
+                <option>Hawaii</option>
+                <option>Idaho</option>
+                <option>Illinois</option>
+                <option>Indiana</option>
+                <option>Iowa</option>
+                <option>Kansas</option>
+                <option>Kentucky</option>
+                <option>Louisiana</option>
+                <option>Maine</option>
+                <option>Maryland</option>
+                <option>Massachusetts</option>
+                <option>Michigan</option>
+                <option>Minnesota</option>
+                <option>Mississippi</option>
+                <option>Missouri</option>
+                <option>Montana</option>
+                <option>Nebraska</option>
+                <option>Nevada</option>
+                <option>New Hampshire</option>
+                <option>New Jersey</option>
+                <option>New Mexico</option>
+                <option>New York</option>
+                <option>North Carolina</option>
+                <option>North Dakota</option>
+                <option>Ohio</option>
+                <option>Oklahoma</option>
+                <option>Oregon</option>
+                <option>Pennsylvania</option>
+                <option>Rhode Island</option>
+                <option>South Carolina</option>
+                <option>South Dakota</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Utah</option>
+                <option>Vermont</option>
+                <option>Virginia</option>
+                <option>Washington</option>
+                <option>West Virginia</option>
+                <option>Wisconsin</option>
+                <option>Wyoming</option>
+            </select> <br><br>
+
+            <label for="country">Please Select Your Country</label> <br />
+            <select id="country" name="country">
+                <option></option>
+                <option>United States</option>
+                <option>Canada</option>
+            </select> <br /> <br />
+
+        </div>
+
+        <input type="submit" />
+
+
+    </fieldset>
+</form>
+

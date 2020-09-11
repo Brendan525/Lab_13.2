@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    @*@Styles.Render("~/Content/index.css");*@
+
+}
+
+<div class="jumbotron">
+    <h2>Welcome to GC Coffee</h2><br />
+
+    <img src="~/Content/Images/FirstNational-20140625-0021.jpg" height="400" class="coffee2" />
+
+    <h2>Shop! @Html.ActionLink("Registration", "Registration", "Home")</h2>
+
+    <h3>Click @Html.ActionLink("here", "OrderMenu", "Home") to order coffee</h3>
+</div>
