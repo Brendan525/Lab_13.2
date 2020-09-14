@@ -119,3 +119,4 @@ C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\bin\Debug\netcoreapp3.1\runti
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Testing.cshtml.g.cs
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Razor\Views\Product\Detail.cshtml.g.cs
 C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Razor\Views\Product\Product.cshtml.g.cs
+C:\Users\BBURCH\DevBuildProjects\Lab_13.2\Lab_13.2\obj\Debug\netcoreapp3.1\Lab_13.2.csprojAssemblyReference.cache

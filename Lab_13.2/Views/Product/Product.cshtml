@@ -2,16 +2,20 @@
 
 @{
     ViewData["Title"] = "Index";
+    <link href="~/css/Product.css" rel="stylesheet" type="text/css" />
 }
 
-<h1>List of Products</h1>
+<body>
+    <h1>List of Products</h1>
 
 
-@foreach (CoffeeTable item in Model)
-{
-<a href="/Product/Detail?ProductID=@item.ProductID">@item.ProductName</a>
-<br />
-}
+    @foreach (CoffeeTable item in Model)
+    {
+        <a href="/Product/Detail?ProductID=@item.ProductID">@item.ProductName</a>
+        <br />
+    }
+
+</body>
 
 
 
