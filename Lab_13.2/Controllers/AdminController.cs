@@ -21,6 +21,7 @@ namespace Lab_13._2.Controllers
             db.Open();
             List<CoffeeTable> prod = db.Query<CoffeeTable>("SELECT * FROM CoffeeTable").AsList<CoffeeTable>();
             db.Close();
+          
 
             return View(prod);
         }
@@ -33,10 +34,11 @@ namespace Lab_13._2.Controllers
 
         public IActionResult SaveNew(long productID, string productName, string productDescription, decimal productPrice, string productCategory)
         {
+
             if (productID >= 1)
             {
                 CoffeeTable.Update(productID, productName, productDescription, productPrice, productCategory);
-            }
+            }     
             else
             {
                 CoffeeTable.Create(productName, productDescription, productPrice, productCategory);
@@ -59,10 +61,27 @@ namespace Lab_13._2.Controllers
             return View("Add");
         }
 
+        public IActionResult Delete(long ProductID)
+        {
+            //IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; user id=admin; password=pass1;");
+            //db.Open();
+            //CoffeeTable.Delete(ProductID);
+            //db.Close();
+            //return View("Add");
+
+            CoffeeTable.Read(ProductID);
+            CoffeeTable.Delete(ProductID);
+            return View("Delete");
+        }
+
+
         public IActionResult Test2()
         {
-            CoffeeTable.Update(4, "Orange", "Round", 0.99m, "Food");
-            return Content("Ok");
+            IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; user id=admin; password=pass1;");
+            db.Open();
+            CoffeeTable.Delete(4);
+            db.Close();
+            return View("Delete");
         }
     }
 }

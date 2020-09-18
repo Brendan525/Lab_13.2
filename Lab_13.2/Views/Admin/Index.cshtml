@@ -11,7 +11,7 @@
 @foreach (CoffeeTable prod in Model)
 {
     <h3>@prod.ProductName</h3>
-    <button><a href="/Admin/Edit?ProductID=@prod.ProductID">Edit</a></button> @*<button>Delete</button>*@
+    <button><a href="/Admin/Edit?ProductID=@prod.ProductID">Edit</a></button> <button><a href="/Admin/Delete?ProductID=@prod.ProductID">Delete</a></button>
     <br />
 }
 

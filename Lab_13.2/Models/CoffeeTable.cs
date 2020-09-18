@@ -45,7 +45,7 @@ namespace Lab_13._2.Models
 
             // Save it to the database     
             IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; user id=admin; password=pass1;");
-            long _id = db.Insert<CoffeeTable>(prod);
+            db.Insert<CoffeeTable>(prod);
 
             // Set the id column of the instance
             //prod.ProductID = _id;
@@ -61,10 +61,11 @@ namespace Lab_13._2.Models
             db.Update(prod);
         }
 
-        public static void Delete(long _id)
+        public static void Delete(long _productID)
         {
+            CoffeeTable prod = new CoffeeTable() { ProductID = _productID };
             IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; user id=admin; password=pass1;");
-            db.Delete(new CoffeeTable() { ProductID = _id });
+            db.Delete(prod);
         }
     }
 }
