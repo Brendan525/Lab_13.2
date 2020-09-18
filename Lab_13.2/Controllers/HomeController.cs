@@ -28,6 +28,9 @@ namespace Lab_13._2.Controllers
 
         public IActionResult Privacy()
         {
+            //Product prod = Product.Create("Kitty Litter", 13.95m, "Food", "Cat Food");
+            //return Content($"{prod.ProductID} {prod.ProductName} {prod.Price} {prod.Description} {prod.Category}");
+
             return View();
         }
 
@@ -61,15 +64,11 @@ namespace Lab_13._2.Controllers
             return View(webOrder1);
         }
 
-        public IActionResult Testing()
-        {
-            IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; Trusted_Connection=Yes");
-            db.Open();
-            List<CoffeeTable> order = db.Query<CoffeeTable>("SELECT * FROM CoffeeTable").AsList<CoffeeTable>();
-            db.Close();
-     
-            return View(order);
-        }
+        //public IActionResult Testing()
+        //{
+        //    CoffeeTable prod = CoffeeTable.Create("Kitty Litter", 13.95m);
+        //    return Content($"{prod.ProductID} {prod.ProductName} {prod.Price}");
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -16,14 +16,10 @@ namespace Lab_13._2.Controllers
     {
         public IActionResult Product()
         {
-            IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; Trusted_Connection=Yes");
+            IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; user id=admin; password=pass1;");
             db.Open();
             List<CoffeeTable> order = db.Query<CoffeeTable>("SELECT * FROM CoffeeTable").AsList<CoffeeTable>();
 
-            //foreach (CoffeeTable Field in order)
-            //{
-            //    Console.WriteLine($"{Field.ProductID} {Field.ProductName} {Field.Description}");
-            //}
 
             db.Close();
 
@@ -33,7 +29,7 @@ namespace Lab_13._2.Controllers
 
         public IActionResult Detail(int ProductID)
         {
-            IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; Trusted_Connection=Yes");
+            IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; user id=admin; password=pass1;");
             db.Open();
             CoffeeTable details = db.QuerySingle<CoffeeTable>($"SELECT * FROM CoffeeTable WHERE ProductID = {ProductID}");
             db.Close();

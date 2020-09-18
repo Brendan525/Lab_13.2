@@ -1,0 +1,13 @@
+﻿<h1>@ViewBag.PageName</h1>
+
+<form method="post" action="/Admin/SaveNew">
+    Product Name: <input type="text" name="productName" value="@ViewBag.ProductName" /> <br />
+
+    Product Description: <input type="text" name="productDescription" value="@ViewBag.Description" /> <br />
+    Product Price: <input type="text" name="productPrice" value="@ViewBag.Price" /> <br />
+    Product Category: <input type="text" name="productCategory" value="@ViewBag.Category" /> <br />
+    <input type="hidden" name="id" value="@ViewBag.ProductID" />
+
+    <input type="submit" value="@ViewBag.PageName" />
+</form>
+
