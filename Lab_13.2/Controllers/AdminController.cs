@@ -33,7 +33,7 @@ namespace Lab_13._2.Controllers
 
         public IActionResult SaveNew(long productID, string productName, string productDescription, decimal productPrice, string productCategory)
         {
-            if (id >= 1)
+            if (productID >= 1)
             {
                 CoffeeTable.Update(productID, productName, productDescription, productPrice, productCategory);
             }
@@ -47,18 +47,16 @@ namespace Lab_13._2.Controllers
             return View("Index", prod); 
         }
 
-        public IActionResult Edit(long id)
+        public IActionResult Edit(long ProductID)
         {
             ViewBag.PageName = "Edit";
-            CoffeeTable prod = CoffeeTable.Read(id);
+            CoffeeTable prod = CoffeeTable.Read(ProductID);
             ViewBag.ProductID = prod.ProductID;
             ViewBag.ProductName = prod.ProductName;
-            ViewBag.Description = prod.Description;
-            ViewBag.Price = prod.Price;
-            ViewBag.Category = prod.Category;
+            ViewBag.ProductDescription = prod.Description;
+            ViewBag.ProductPrice = prod.Price;
+            ViewBag.ProductCategory = prod.Category;
             return View("Add");
-
-
         }
 
         public IActionResult Test2()

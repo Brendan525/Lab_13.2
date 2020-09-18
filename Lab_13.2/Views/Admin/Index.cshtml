@@ -1,5 +1,9 @@
 ﻿@model List<CoffeeTable>
 
+@{
+    ViewData["Title"] = "Index";
+}
+
 <h1>Index</h1>
 
 <b style="color:red;">@ViewBag.Message</b>
@@ -7,7 +11,7 @@
 @foreach (CoffeeTable prod in Model)
 {
     <h3>@prod.ProductName</h3>
-    <button><a href="/Admin/Edit?id=@prod.ProductID">Edit</a></button> <button>Delete</button>
+    <button><a href="/Admin/Edit?ProductID=@prod.ProductID">Edit</a></button> @*<button>Delete</button>*@
     <br />
 }
 
@@ -15,4 +19,3 @@
 <br />
 
 <a href="/Admin/Add">Add A New Product</a>
-

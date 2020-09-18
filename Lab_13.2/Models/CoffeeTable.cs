@@ -34,8 +34,8 @@ namespace Lab_13._2.Models
         public static CoffeeTable Read(long _id)
         {
             IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; user id=admin; password=pass1;");
-            CoffeeTable blog = db.Get<CoffeeTable>(_id);
-            return blog;
+            CoffeeTable prod = db.Get<CoffeeTable>(_id);
+            return prod;
         }
 
         public static void Create(string _productName, string _description, decimal _price, string _category) // Creates a product
@@ -54,16 +54,16 @@ namespace Lab_13._2.Models
             //return prod;
         }
 
-        public static void Update(long _id, string _productName, string _description, decimal _price, string _category)
+        public static void Update(long _productID, string _productName, string _description, decimal _price, string _category)
         {         
-            CoffeeTable prod = new CoffeeTable() { ProductID = _id, ProductName = _productName, Description = _description, Price = _price, Category = _category }; 
+            CoffeeTable prod = new CoffeeTable() { ProductID = _productID, ProductName = _productName, Description = _description, Price = _price, Category = _category }; 
             IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; user id=admin; password=pass1;");
-            db.Insert(prod);
+            db.Update(prod);
         }
 
         public static void Delete(long _id)
         {
-            IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; user id=admin; password=abc123;");
+            IDbConnection db = new SqlConnection("Server=GWJSN13\\SQLEXPRESS; Database=Coffee2; user id=admin; password=pass1;");
             db.Delete(new CoffeeTable() { ProductID = _id });
         }
     }
